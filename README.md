@@ -1,78 +1,99 @@
-# Sentiment Analysis of Customer Reviews
+## 📌 Project Overview
 
-Welcome to my sentiment analysis project! This repository contains a Python-based analysis of customer reviews using Jupyter Notebook, designed to classify sentiments and uncover insights through data visualization and statistical analysis. The project leverages popular libraries like TextBlob, pandas, Matplotlib, and Seaborn to process and visualize review data.
+This project focuses on analyzing customer reviews and ratings of **Boat headphones** collected from Flipkart. The goal is to extract meaningful insights using **Exploratory Data Analysis (EDA)** and **Natural Language Processing (NLP)** techniques.
 
-## Overview
+---
 
-This project analyzes a dataset of customer reviews to determine sentiment (Positive, Negative, or Neutral) and explores relationships between sentiment and metrics such as helpfulness votes, review timing, and calculated scores. The goal is to provide actionable insights into customer satisfaction and feedback trends, showcasing skills in data science, natural language processing (NLP), and data visualization.
+## 📊 Dataset
 
-### Key Features
-- Sentiment classification using TextBlob to assign polarity scores.
-- Data cleaning to handle missing values and prepare the dataset.
-- Rich visualizations including count plots, bar charts, word clouds, and correlation heatmaps.
-- Statistical analysis to identify correlations between review metrics.
+* Source: Flipkart (Boat headphone customer reviews & ratings)
+* Features:
 
-## Project Highlights
+  * `review` → Customer review text
+  * `rating` → Rating given by user (1–5)
 
-### Visualizations
-1. **Sentiment Distribution (Count Plot)**  
-   - Displays the frequency of Positive, Negative, and Neutral sentiments, with Positive reviews dominating (over 4,000 counts).
-2. **Helpful Votes by Sentiment (Bar Chart)**  
-   - Shows that Positive reviews average ~15 helpful votes, far exceeding Negative and Neutral (~1 vote each).
+---
 
-3. **Positive Review Word Cloud**  
-   - Highlights frequent terms like "great," "phone," "easy," and "Samsung" from positive reviews.
+## 🚀 Project Objectives
 
-4. **Correlation Matrix (Heatmap)**  
-   - Reveals strong correlations (e.g., 1.00 between helpfulness and total votes) and negative correlations (e.g., -1.00 between `days_since_first_review` and `day_diff`).
+* Perform **data cleaning and preprocessing**
+* Analyze rating distribution and customer behavior
+* Perform **sentiment analysis** on reviews
+* Visualize patterns using graphs and charts
+* (Upcoming) Build a **Machine Learning model** for prediction
 
-### Key Insights
-- Positive sentiments dominate, indicating high customer satisfaction.
-- Positive reviews receive significantly more helpful votes, suggesting their influence.
-- Strong correlations between metrics like review length and helpfulness votes offer data-driven insights.
+---
 
-## Getting Started
+## 🛠️ Technologies Used
 
-### Prerequisites
-Ensure you have Python 3.x installed, along with the following libraries:
-- `pandas`
-- `matplotlib`
-- `seaborn`
-- `nltk`
-- `textblob`
-- `wordcloud`
+* Python
+* Pandas & NumPy
+* Matplotlib & Seaborn
+* TextBlob (Sentiment Analysis)
+* WordCloud
 
-You can install these using pip:
-```bash
-pip install "pandas", "matplotlib", "seaborn", "nltk", "textblob", "wordcloud".
+---
+
+## 📈 Exploratory Data Analysis (EDA)
+
+The following analysis has been performed:
+
+* Rating distribution analysis
+* Review length analysis
+* Sentiment distribution
+* Correlation heatmap
+* Rating vs Sentiment comparison
+* WordCloud visualization
+
+---
+
+## 💡 Key Insights
+
+* Majority of customers give **high ratings (4–5)**
+* Most reviews show **positive sentiment**
+* Common keywords include *sound*, *bass*, *battery*
+* Weak correlation between review length and rating
+
+---
+
+## 🤖 Future Improvements (ML Upgrade)
+
+This project will be extended by adding:
+
+* Machine Learning model (Logistic Regression / Naive Bayes)
+* Sentiment prediction system
+* Model evaluation (Accuracy, Confusion Matrix)
+* Possible deployment (Streamlit Dashboard)
+
+---
+
+## 📂 Project Structure
+
+```
+Boat_Project/
+│
+├── Boat_Review_Analysis.ipynb
+├── data.csv
+├── README.md
 ```
 
-## Project Structure
-- `README.md`: This file, providing project documentation.
-- `amazon.csv`: Dataset containing review data.
-- `code.ipynb`: Main Jupyter Notebook with the complete analysis and visualizations.
+---
 
-## Built With
-- **Python**: Core programming language.
-- **pandas**: Data manipulation and analysis.
-- **Matplotlib & Seaborn**: Data visualization with a custom dark theme.
-- **TextBlob**: Sentiment analysis and polarity scoring.
-- **NLTK**: Text preprocessing.
-- **WordCloud**: Word cloud generation.
-- **Jupyter Notebook**: Interactive development environment.
+## ▶️ How to Run
 
-## Challenges & Solutions
-- **Missing Data**: Dropped rows with missing `reviewText` to ensure clean input for TextBlob.
-- **Visualization Issues**: Resolved Seaborn warnings and ensured plots saved correctly with `plt.tight_layout()` and higher DPI.
-- **Time Metrics**: Noted a perfect negative correlation between `days_since_first_review` and `day_diff`, prompting further investigation into dataset structure.
+1. Clone the repository
+2. Install required libraries:
 
-## Future Improvements
-- Incorporate more advanced NLP techniques (e.g., BERT) for sentiment analysis.
-- Add time-series analysis to track sentiment trends over months or years.
-- Enhance the dataset with additional features (e.g., product categories).
+   ```
+   pip install pandas numpy matplotlib seaborn textblob wordcloud
+   ```
+3. Open Jupyter Notebook
+4. Run all cells
 
-## Acknowledgments
-- Thanks to the open-source community for tools like TextBlob and WordCloud.
+---
 
-## Contact
-Have questions or suggestions? Connect with me on [Linkedin](https://www.linkedin.com/in/sumit-kumar-a6b4a4295) or open an issue in this repository!
+## 🎯 Conclusion
+
+This project demonstrates how customer feedback can be analyzed using data science techniques to extract valuable insights. It serves as a foundation for building advanced ML-based recommendation or sentiment prediction systems.
+
+---
